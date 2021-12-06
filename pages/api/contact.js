@@ -18,12 +18,14 @@ export default async function contactHandler(req, res) {
 
     let client;
     const newMessage = { email, name, message };
-    console.log("in api calls", newMessage);
+
+    const connectionString = `mongodb+srv://${process.env.MONGODB_USERNAME}:${process.env.MONGODB_PASSWORD}@${process.env.MONGODB_CLUSTER}.j2tj1.mongodb.net/${process.env.MONGODB_DBKEY}?retryWrites=true&w=majority`;
+    console.log("in api calls", connectionString);
     try {
-      client = await MongoClient.connect(
-        "mongodb+srv://thoushif:thoushifblogsadmin@cluster0.j2tj1.mongodb.net/thoushifblogs?retryWrites=true&w=majority",
-        { useNewUrlParser: true, useUnifiedTopology: true }
-      );
+      client = await MongoClient.connect(connectionString, {
+        useNewUrlParser: true,
+        useUnifiedTopology: true
+      });
     } catch (err) {
       console.log("in api calls", err);
       res.status(500).json({ message: "Could not connect to DB" });
