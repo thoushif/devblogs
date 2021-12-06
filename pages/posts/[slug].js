@@ -34,7 +34,7 @@ export function getStaticPaths() {
 
   return {
     paths: slugPaths,
-    fallback: true
+    fallback: "blocking"
   };
 }
 
