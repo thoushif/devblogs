@@ -1,0 +1,15 @@
+.notFound {
+  text-align: center;
+  margin: 100px 0 200px;
+}
+
+.notFound h1 {
+  font-size: var(--size-8);
+  color: var(--color-grey-100);
+  margin: 0;
+}
+.notFound a {
+  font-size: var(--size-5);
+  color: var(--color-grey-100);
+  margin: 0;
+}

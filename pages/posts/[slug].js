@@ -1,7 +1,11 @@
 import Head from "next/head";
 import { Fragment } from "react";
 import PostContent from "../../components/posts/post-detail/post-content";
-import { getPostData, getPostsFiles } from "../../lib/posts-util";
+import {
+  getPostData,
+  postsDirectory,
+  getPostsFiles,
+} from "../../lib/posts-util";
 
 function PostDetailPage(props) {
   return (
@@ -17,13 +21,13 @@ function PostDetailPage(props) {
 
 export function getStaticProps(context) {
   const { slug } = context.params;
-  const postData = getPostData(slug);
+  const postData = getPostData(slug, postsDirectory);
 
   return {
     props: {
-      postData: postData
+      postData: postData,
     },
-    revalidate: 600
+    revalidate: 600,
   };
 }
 
@@ -34,7 +38,7 @@ export function getStaticPaths() {
 
   return {
     paths: slugPaths,
-    fallback: "blocking"
+    fallback: "blocking",
   };
 }
 

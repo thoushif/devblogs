@@ -13,6 +13,9 @@ export default function MainNavigation() {
       <nav>
         <ul>
           <li>
+            <Link href="/portfolio">Portfolio</Link>
+          </li>
+          <li>
             <Link href="/posts">Posts</Link>
           </li>
           <li>

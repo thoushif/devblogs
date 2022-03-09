@@ -8,11 +8,11 @@ export default function PostsItem(props) {
   const formattedDate = new Date(date).toLocaleDateString("en-US", {
     day: "numeric",
     month: "long",
-    year: "numeric"
+    year: "numeric",
   });
 
   const imagePath = `/images/posts/${slug}/${image}`;
-  const linkPath = `/posts/${slug}`;
+  const linkPath = `/${props.isporfolio ? "portfolio" : "posts"}/${slug}`;
 
   return (
     <li className={classes.post}>

@@ -1,6 +1,7 @@
 .header {
   width: 100%;
-  height: 6rem;
+  height: 8rem;
+  background-image: linear-gradient(to top, #023d53, #023d53);
   background-color: var(--color-grey-900);
   display: flex;
   justify-content: space-between;

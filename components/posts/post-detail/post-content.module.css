@@ -4,9 +4,13 @@
   margin: var(--size-8) auto;
   font-size: var(--size-5);
   line-height: var(--size-8);
-  background-color: var(--color-grey-100);
+  background: var(--color-grey-100);
   border-radius: 6px;
   padding: var(--size-4);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(254, 204, 204, 0.3);
 }
 
 .content p {

@@ -7,13 +7,14 @@ import atomDark from "react-syntax-highlighter/dist/cjs/styles/prism/atom-dark";
 
 export default function PostContent(props) {
   const { post } = props;
-  const imagePath = `/images/posts/${post.slug}/${post.image}`;
+  const imagesFolder = `${props.isporfolio ? "portfolio" : "posts"}`;
+  const imagePath = `/images/${imagesFolder}/${post.slug}/${post.image}`;
 
   const customRenderers = {
     img(image) {
       return (
         <Image
-          src={`/images/posts/${post.slug}/${image.src}`}
+          src={`/images/${imagesFolder}/${post.slug}/${image.src}`}
           alt={image.alt}
           width={600}
           height={500}
@@ -28,8 +29,8 @@ export default function PostContent(props) {
         return (
           <div className={classes.image}>
             <Image
-              src={`/images/posts/${post.slug}/${image.properties.src}`}
-              alt={image.alt}
+              src={`/images/${imagesFolder}/${post.slug}/${image.properties.src}`}
+              alt={image.properties.alt}
               width={600}
               height={500}
             />
@@ -48,7 +49,7 @@ export default function PostContent(props) {
           children={children}
         />
       );
-    }
+    },
   };
 
   return (

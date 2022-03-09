@@ -19,12 +19,12 @@ export default async function contactHandler(req, res) {
     let client;
     const newMessage = { email, name, message };
 
-    const connectionString = `mongodb+srv://${process.env.MONGODB_USERNAME}:${process.env.MONGODB_PASSWORD}@${process.env.MONGODB_CLUSTER}.j2tj1.mongodb.net/${process.env.MONGODB_DBKEY}?retryWrites=true&w=majority`;
+    const connectionString = process.env.MONGODB_URI;
     console.log("in api calls", connectionString);
     try {
       client = await MongoClient.connect(connectionString, {
         useNewUrlParser: true,
-        useUnifiedTopology: true
+        useUnifiedTopology: true,
       });
     } catch (err) {
       console.log("in api calls", err);
@@ -42,7 +42,7 @@ export default async function contactHandler(req, res) {
     }
     res.status(201).json({
       message: "Successfully stored message!",
-      newMessage: newMessage
+      newMessage: newMessage,
     });
     client.close();
   }

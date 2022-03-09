@@ -8,8 +8,8 @@ async function sendContactData(contactFormData) {
     method: "POST",
     body: JSON.stringify(contactFormData),
     headers: {
-      "Content-Type": "application/json"
-    }
+      "Content-Type": "application/json",
+    },
   });
   const data = await response.json();
   if (!response.ok) {
@@ -25,7 +25,7 @@ export default function ContactForm() {
   const initReqStatus = {
     status: undefined,
     title: undefined,
-    message: undefined
+    message: undefined,
   };
   const [reqStatusObj, setReqStatusObj] = useState(initReqStatus);
 
@@ -54,12 +54,12 @@ export default function ContactForm() {
     const value = evt.target.value;
     setContactFormData({
       ...contactFormData,
-      [evt.target.id]: value
+      [evt.target.id]: value,
     });
   }
   return (
     <section className={classes.contact}>
-      <h1>How can I help you?</h1>
+      <h1>Want to share something?</h1>
       <form className={classes.form}>
         <div className={classes.controls}>
           <div className={classes.control}>

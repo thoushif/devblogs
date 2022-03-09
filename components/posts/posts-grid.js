@@ -6,7 +6,7 @@ export default function PostsGrid(props) {
   return (
     <ul className={classes.grid}>
       {posts.map((post) => (
-        <PostsItem key={post.slug} post={post} />
+        <PostsItem key={post.slug} post={post} isporfolio={props.isporfolio} />
       ))}
     </ul>
   );

@@ -2,7 +2,7 @@
 title: "Hello peeps, This is my first blog"
 date: "2021-12-04"
 image: "hello.jpg"
-excerpt: "Greetings"
+excerpt: "Greetings Greetings Greetings Greetings Greetings Greetings Greetings Greetings Greetings Greetings Greetings Greetings Greetings "
 isFeatured: true
 ---
 
