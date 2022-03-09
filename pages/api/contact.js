@@ -10,9 +10,11 @@ export default async function contactHandler(req, res) {
       !name ||
       name.trim() === "" ||
       !message ||
-      message.trim() === ""
+      message.trim() === "" ||
+      message.length > 1000 ||
+      name.length > 250
     ) {
-      res.status(422).json("Invalid input");
+      res.status(422).json({ message: "Please check your inputs" });
       return;
     }
 

@@ -1,16 +1,18 @@
 .contact {
   margin: var(--size-8) auto;
   border-radius: 6px;
-  background-color: var(--color-grey-100);
+  background: rgba(255, 239, 239, 0.58);
   width: 90%;
   max-width: 50rem;
   padding: var(--size-4);
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
   font-size: var(--size-6);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
 }
 
 .contact h1 {
-  font-size: var(--size-8);
+  font-size: var(--size-6);
   margin: var(--size-4) 0;
   text-align: left;
 }
@@ -68,7 +70,7 @@
 
 @media (min-width: 768px) {
   .contact h1 {
-    font-size: var(--size-16);
+    font-size: var(--size-8);
     text-align: center;
   }
 }
