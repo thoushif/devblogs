@@ -10,8 +10,9 @@ export default function PostsItem(props) {
     month: "long",
     year: "numeric",
   });
+  const imagesFolder = `${props.isporfolio ? "portfolio" : "posts"}`;
 
-  const imagePath = `/images/posts/${slug}/${image}`;
+  const imagePath = `/images/${imagesFolder}/${slug}/${image}`;
   const linkPath = `/${props.isporfolio ? "portfolio" : "posts"}/${slug}`;
 
   return (
@@ -22,7 +23,7 @@ export default function PostsItem(props) {
             <Image
               src={imagePath}
               alt={title}
-              width={300}
+              width={props.isporfolio ? 500 : 300}
               height={300}
               layout="intrinsic"
             />

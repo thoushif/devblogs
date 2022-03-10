@@ -7,7 +7,8 @@ import atomDark from "react-syntax-highlighter/dist/cjs/styles/prism/atom-dark";
 
 export default function PostContent(props) {
   const { post } = props;
-  const imagesFolder = `${props.isporfolio ? "portfolio" : "posts"}`;
+  const imagesFolder = `${props.isportfolio ? "portfolio" : "posts"}`;
+  console.log(imagesFolder, "imagesFolder");
   const imagePath = `/images/${imagesFolder}/${post.slug}/${post.image}`;
 
   const customRenderers = {
@@ -22,17 +23,42 @@ export default function PostContent(props) {
       );
     },
 
+    a(link) {
+      const { node } = link;
+      return (
+        <a href={`${node.properties.href}`} target="_blank">
+          {link.children}
+        </a>
+      );
+    },
+
     p(paragraph) {
       const { node } = paragraph;
       if (node.children[0].tagName === "img") {
         const image = node.children[0];
+        if (image.properties.alt.startsWith("video")) {
+          return (
+            <div className={classes.image}>
+              <video
+                controls
+                muted
+                width={700}
+                height={450}
+                onMouseOver={(event) => event.target.play()}
+                onMouseOut={(event) => event.target.pause()}
+              >
+                <source src={image.properties.src} type="video/mp4" />
+              </video>
+            </div>
+          );
+        }
         return (
           <div className={classes.image}>
             <Image
               src={`/images/${imagesFolder}/${post.slug}/${image.properties.src}`}
               alt={image.properties.alt}
-              width={600}
-              height={500}
+              width={800}
+              height={450}
             />
           </div>
         );
