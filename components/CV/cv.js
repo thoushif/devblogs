@@ -5,7 +5,7 @@ export default function CVComponent() {
     <section className={classes.cv}>
       <iframe
         style={{ width: "100%", height: "800px" }}
-        src="/static/ThoushifAazamShaik-FullStackDeveloper.pdf"
+        src="/static/ThoushifAazamShaik-FullStackDeveloper.pdf#toolbar=0"
       ></iframe>
     </section>
   );

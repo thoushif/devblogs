@@ -1,6 +1,7 @@
 import Head from "next/head";
 import { Fragment } from "react";
 import AllPosts from "../../components/posts/all-posts";
+import PortfolioDetail from "../../components/posts/portfolio-detail";
 import { getAllPortfolioProjects } from "../../lib/posts-util";
 
 function AllPostsPage(props) {
@@ -10,6 +11,7 @@ function AllPostsPage(props) {
         <title>All Posts</title>
         <meta name="description" content="all thoushif blogs" />
       </Head>
+      <PortfolioDetail />
       <AllPosts posts={props.posts} isportfolio />
     </Fragment>
   );

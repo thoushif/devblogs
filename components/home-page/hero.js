@@ -20,7 +20,11 @@ export default function Hero() {
           loop
           typeSpeed={50}
           backSpeed={50}
-          strings={[" Web development..", " Web design..", " Space.."]}
+          strings={[
+            " Web development..",
+            " Web design..",
+            " Web anything.. ;)",
+          ]}
           smartBackspace
           shuffle={false}
           backDelay={1000}
