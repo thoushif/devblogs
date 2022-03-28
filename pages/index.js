@@ -22,7 +22,7 @@ function HomePage(props) {
         />
       </Head>
       <Hero />
-      <FeaturedPosts posts={props.posts} />
+      {/* <FeaturedPosts posts={props.posts} /> */}
     </Fragment>
   );
 }
