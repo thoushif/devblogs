@@ -29,4 +29,5 @@ Code is [here!](https://github.com/thoushif/help-helper.git)
 ## Welcome page
 ![Welcome](intro.jpg)
 
-
+## Add a help to see the suggestions, (this works other way too..ask for a help, see suggestions anybody giving helps)
+![Give Help, see suggestions](give-help.png)
