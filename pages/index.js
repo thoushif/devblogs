@@ -1,38 +1,36 @@
 import Head from "next/head";
 import { Fragment } from "react";
-import FeaturedPosts from "../components/home-page/featuredposts";
+import ContactForm from "../components/contacts/contact-form";
 import Hero from "../components/home-page/hero";
-import { getFeaturedPosts } from "../lib/posts-util";
+import { getAllPortfolioProjects, getFeaturedPosts } from "../lib/posts-util";
+import AllPostsPage from "./portfolio";
 
 function HomePage(props) {
-  const particlesInit = (main) => {
-    console.log(main);
-
-    // you can initialize the tsParticles instance (main) here, adding custom shapes or presets
-  };
-  const particlesLoaded = (container) => {
-    console.log(container);
-  };
   return (
     <Fragment>
+      <Hero />
+      {/* <FeaturedPosts posts={props.posts} /> */}
+      <AllPostsPage posts={props.allPosts} />
       <Head>
+        <title>Thoushif</title>
         <meta
           name="description"
           content="I post about my web development stories"
         />
       </Head>
-      <Hero />
-      {/* <FeaturedPosts posts={props.posts} /> */}
+
+      <ContactForm />
     </Fragment>
   );
 }
 
 export function getStaticProps() {
   const featuredPosts = getFeaturedPosts();
-
+  const allPosts = getAllPortfolioProjects();
   return {
     props: {
       posts: featuredPosts,
+      allPosts,
     },
   };
 }

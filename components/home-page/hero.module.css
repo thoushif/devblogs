@@ -2,6 +2,8 @@
   text-align: center;
   background-image: linear-gradient(to top, #023d53, #023d53);
   padding: var(--size-8) 0;
+  height: 100vh;
+  width: 100%;
 }
 
 .image {
@@ -33,4 +35,9 @@
   width: 90%;
   max-width: 40rem;
   margin: auto;
+}
+
+.intro {
+  font-size: var(--size-20);
+  margin: var(--size-8) auto;
 }
