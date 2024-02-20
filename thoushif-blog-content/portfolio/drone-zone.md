@@ -22,7 +22,7 @@ This is a web app for showcasing drones. Write the letters, see the upvotes. Sim
 &nbsp;
 Code is [here!](https://github.com/thoushif/dr.git)
 &nbsp;
-# [Link to app](https://dr1.vercel.app/)
+# [Link to app](https://dronezone.vercel.app/)
 &nbsp;
  
 ## Welcome page
