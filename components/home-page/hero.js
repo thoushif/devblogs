@@ -47,9 +47,6 @@ export default function Hero() {
         />
       </div>
       <h1>Hi, I'm Thoushif</h1>
-      <p>
-        I blog about <span ref={el}></span>
-      </p>
       <div className={classes.intro}>
         <p>
           I am a Full Stack developer, passionate about about web technologies,
