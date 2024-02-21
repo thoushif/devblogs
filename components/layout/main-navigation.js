@@ -19,6 +19,9 @@ export default function MainNavigation() {
             <Link href="/portfolio">Portfolio</Link>
           </li>
           <li>
+            <Link href="/skills">Skills</Link>
+          </li>
+          <li>
             <Link href="/contact">Contact</Link>
           </li>
         </ul>

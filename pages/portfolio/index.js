@@ -6,14 +6,14 @@ import { getAllPortfolioProjects } from "../../lib/posts-util";
 
 function AllPostsPage(props) {
   return (
-    <Fragment>
+    <section>
       <Head>
         <title>All Posts</title>
         <meta name="description" content="all thoushif blogs" />
       </Head>
-      <PortfolioDetail />
+
       <AllPosts posts={props.posts} isportfolio />
-    </Fragment>
+    </section>
   );
 }
 
