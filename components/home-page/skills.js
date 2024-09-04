@@ -15,6 +15,7 @@ const Skills = React.forwardRef((props, ref) => {
     "Node.js",
   ];
   const cloudSkills = [
+    "Azure",
     "AWS",
     "EC2",
     "S3",
