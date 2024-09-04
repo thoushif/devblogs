@@ -5,7 +5,7 @@ image: "intro.jpg"
 excerpt: "A NextJS web app that helped me explore next 13 library!"
 ---
 
-This is a web app for showcasing drones. Write the letters, see the upvotes. Simple!
+This is a web app for showcasing drones. This includes blogs about latest news! A gallery of pictures taken with the drones!!  
 &nbsp;
 # Tech Stack
 
