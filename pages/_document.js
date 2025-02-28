@@ -13,7 +13,7 @@ export default class MyDocument extends Document {
         <body>
           <Main />
           <NextScript />
-          <Script strategy="beforeInteractive" src="www.thoushif.dev/script.js"
+          <Script strategy="afterInteractive" src="https://thoushif.dev/script.js"
            />
           <div id="notifications"></div>
         </body>
