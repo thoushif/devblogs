@@ -9,7 +9,7 @@ import Link from "next/link";
 export default function Hero({ focus }) {
   const ref = useRef(null);
   return (
-    <section className={classes.hero}>
+    <section className={`${classes.hero} ${classes.heroSection}`}>
       <div className={classes.intro}>
         <h1>
           I am a Full Stack developer, passionate about Java Spring Boot and web
@@ -32,7 +32,7 @@ export default function Hero({ focus }) {
       >
         <path
           d="M490,165.37l-91.698-88.842L245,231.766L91.698,76.528L0,165.37l245,248.102L490,165.37z M91.219,119.611L245,275.343
-	l153.781-155.732l47.717,46.237L245,369.91L43.502,165.848L91.219,119.611z"
+    l153.781-155.732l47.717,46.237L245,369.91L43.502,165.848L91.219,119.611z"
         />
       </svg>
     </section>

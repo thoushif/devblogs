@@ -1,9 +1,12 @@
 .hero {
   text-align: center;
   background-image: linear-gradient(to top, #023d53, #023d53);
-  padding: var(--size-8) 0; 
+  padding: var(--size-8) 0;
   height: 100vh;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .image {
@@ -41,4 +44,29 @@
   font-size: var(--size-20);
   margin: var(--size-8) auto;
   padding: 50px;
+}
+
+/* Add media query for mobile view */
+@media (max-width: 768px) {
+  .hero {
+    height: auto; /* Allow height to adjust based on content */
+    padding: var(--size-6) 0;
+  }
+
+  .intro {
+    font-size: var(--size-12); /* Reduce font size for smaller screens */
+    padding: 20px;
+  }
+
+  .hero h1 {
+    font-size: var(--size-12); /* Adjust heading size */
+  }
+
+  .hero p {
+    font-size: var(--size-5); /* Adjust paragraph size */
+  }
+
+  .heroSection {
+    margin-bottom: var(--size-8); /* Add spacing between sections */
+  }
 }
