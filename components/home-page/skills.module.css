@@ -1,12 +1,12 @@
 .skillsHeading {
-  color:var(--color-grey-400);
+  color: var(--color-grey-400);
   font-size: 3em;
   text-align: center;
   margin-bottom: 1em;
 }
 
 .skillGroup {
-  color:var(--color-grey-100);
+  color: var(--color-grey-100);
   display: flex;
   font-size: 2em;
   margin-top: 1em;
@@ -16,9 +16,30 @@
 }
 
 .skillsList {
-  color:var(--color-grey-50);
-  display: flex; 
-   gap:10px;
+  color: var(--color-grey-50);
+  display: flex;
+  gap: 10px;
   justify-content: center;
   font-size: 1.2em;
+}
+
+/* Add media query for mobile view */
+@media (max-width: 768px) {
+  .skillsHeading {
+    font-size: 2em; /* Adjust heading size for smaller screens */
+    margin: 1.5em; /* Add more spacing below the heading */
+  }
+
+  .skillGroup {
+    font-size: 1.5em; /* Adjust font size for smaller screens */
+    margin: 1.5em auto; /* Center the skill group */
+    text-align: center; /* Ensure text is centered */
+  }
+
+  .skillsList {
+    flex-direction: column; /* Stack items vertically */
+    gap: 5px; /* Reduce gap between items */
+    margin: 0 auto; /* Center the skills list */
+    align-items: center; /* Center items within the flex container */
+  }
 }
