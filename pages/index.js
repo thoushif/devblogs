@@ -1,16 +1,28 @@
 import Head from "next/head";
-import { Fragment } from "react";
+import { Fragment, React, useRef } from "react";
 import ContactForm from "../components/contacts/contact-form";
 import Hero from "../components/home-page/hero";
 import { getAllPortfolioProjects, getFeaturedPosts } from "../lib/posts-util";
 import AllPostsPage from "./portfolio";
+import Skills from "../components/home-page/skills";
 
 function HomePage(props) {
+  const ref = useRef(null);
+  function focus() {
+    ref.current.scrollIntoView({
+      behavior: "smooth",
+      block: "end",
+      inline: "nearest",
+    });
+    console.log(ref.current);
+  }
+
   return (
     <Fragment>
-      <Hero />
+      <Hero focus={focus} />
       {/* <FeaturedPosts posts={props.posts} /> */}
-      <AllPostsPage posts={props.allPosts} />
+      <Skills ref={ref} />
+      <AllPostsPage posts={props.allPosts} />{" "}
       <Head>
         <title>Thoushif</title>
         <meta
@@ -18,7 +30,6 @@ function HomePage(props) {
           content="I post about my web development stories"
         />
       </Head>
-
       <ContactForm />
     </Fragment>
   );
